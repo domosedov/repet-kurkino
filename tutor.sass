@@ -1,0 +1,381 @@
+@import "fonts.sass"
+    
+*
+    margin: 0
+    padding: 0
+    // outline: 1px solid red
+    color: #858482
+    font-family: "PTSans-Regular", sans-serif
+
+li
+    list-style: none
+
+a
+    text-decoration: none
+
+.page
+    max-width: 960px
+    margin: auto
+    display: grid
+    grid-template-columns: minmax(20%, 160px) minmax(80%, 800px)
+    grid-template-rows: 150px 1fr 250px
+    grid-template-areas: "header header" "sidebar main" "footer footer"
+    height: 100vh
+
+.header
+    grid-area: header
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "logo contacts" "title title"
+    &_logo
+        grid-area: logo
+        padding-left: 5%        
+        align-self: center
+        &_link
+            &_image
+                max-width: 205px
+    &_contacts
+        grid-area: contacts
+        padding-right: 5%        
+        display: flex
+        flex-direction: column
+        align-self: center
+        align-items: flex-end
+        &_phone            
+            color: #303030
+            font-size: 36px
+            font-family: "Roboto", sans-serif
+        &_mail
+            color: #303030
+            font-size: 15px
+            padding-left: 25px
+            background: url(/images/icon_mail.png) no-repeat 0 50%
+    &_title
+        grid-area: title
+        .tutor_title
+            font-size: 21px
+            padding-bottom: 15px
+            border-bottom: 1px solid whitesmoke
+
+.sidebar
+    grid-area: sidebar
+    .tutor_profile
+        font-size: 14px
+        &_name
+            display: none
+        &_photo
+            text-align: center
+            img
+                border: 1px solid #9e9e9e
+        &_contacts
+            text-align: center
+            p
+                font-weight: 700
+                font-family: Roboto, sans-serif
+                color: #473306
+            &_phone
+                color: #c30b13
+                font-weight: 700
+            &_mail
+                color: #473306
+                text-decoration: underline
+
+
+.main
+    grid-area: main
+    .tutor_title
+        font-size: 21px
+        margin-bottom: 20px
+    .tutor_name
+        font-size: 26px
+        color: #473306
+        margin-bottom: 20px
+    .tutor_description
+        font-size: 14px
+        margin-bottom: 30px
+        padding-bottom: 10px
+        border-bottom: 1px solid whitesmoke
+    .tutor_contacts
+        margin-top: 15px
+        font-size: 16px
+        &_name
+            font-size: 20px
+            color: #ffae00
+        &_phone
+            font-weight: 700
+            color: #303030
+            a
+                color: #303030
+        &_mail
+            color: #303030
+            text-decoration: underline
+
+// Template
+.template
+    h1, h2, h3, h4, h5, h6
+        font-size: 18px
+        color: #696969
+        margin-top: 20px
+        margin-bottom: 5px
+    p
+        font-size: 16px
+        font-weight: 500
+        color: #858482
+    a
+        color: #303030
+        text-decoration: underline
+    ul
+        li
+            padding-top: 3px
+            padding-bottom: 3px
+            color: #858482
+    &_price
+        margin: 15px auto
+        h1, h2, h3, h4, h5, h6
+            margin-top: 5px
+        padding: 5px 15px
+        background-color: whitesmoke
+        ul
+            li
+                color: #000
+        p
+            padding: 5px 0
+            
+
+
+.footer
+    margin-top: 50px
+    grid-area: footer
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "logo contacts" "dev dev"
+    &_logo
+        padding-left: 5%
+        grid-area: logo
+        align-self: center
+        &_link
+            &_image
+                max-width: 205px
+    &_contacts
+        padding-right: 5%
+        grid-area: contacts
+        display: flex
+        flex-direction: column
+        align-self: center
+        align-items: flex-end
+        &_phone
+            color: #303030
+            font-size: 36px
+            font-family: "Roboto", sans-serif
+        &_mail
+            color: #303030
+            font-size: 15px
+            padding-left: 25px
+            background: url(/images/icon_mail.png) no-repeat 0 50%    
+    &_dev
+        border-top: 1px solid whitesmoke
+        grid-area: dev
+        display: flex
+        justify-content: space-between
+        align-items: center
+        p
+            margin: 0 15px
+        .design
+            font-size: 15px
+            line-height: 23px;
+            padding-left: 22px
+            background: url('/images/icon_des.png') no-repeat 0 50%
+
+@media screen and ( max-width: 1000px )
+    .header_title
+        .tutor_title
+            padding-left: 5%
+
+@media screen and ( max-width: 850px )
+    .main
+        padding-left: 5%
+        padding-right: 5%
+    .sidebar
+        padding-left: 5%
+        padding-right: 5%
+
+@media screen and ( max-width: 680px )
+    .page        
+        grid-template-rows: 100px 1fr 1fr 100px
+        grid-template-areas: "header header" "sidebar sidebar" "main main" "footer footer"
+    .header
+        grid-area: header
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin: 0px auto
+        padding: 0
+        width: 100%
+        &_logo
+            &_link
+                &_image
+                    width: 150px
+        &_contacts
+            &_phone
+                font-size: 26px
+        &_title
+            border-top: 1px solid whitesmoke
+            padding: 5px 0
+            text-align: center
+            .tutor_title
+                padding: 0
+                border-bottom: none
+    
+    .main
+        grid-area: main
+        margin-bottom: 20px
+        .tutor_name
+            display: none
+        .tutor_description
+            font-size: 16px
+
+    .sidebar
+        padding-left: 5%
+        padding-right: 5%
+        grid-area: sidebar
+        .tutor_profile
+            font-size: 14px
+            &_name
+                display: block
+                text-align: center
+                font-weight: 700
+                font-size: 26px
+                color: #473306
+                margin-bottom: 10px
+            &_photo
+                text-align: center
+                img
+                    width: 30vw
+                    border: 1px solid #9e9e9e
+            &_contacts
+                text-align: start
+                margin-bottom: 10px
+                p
+                    font-size: 20px
+                    font-weight: 700
+                    font-family: Roboto, sans-serif
+                    color: #473306
+                &_phone
+                    font-size: 20px
+                    color: #c30b13
+                    font-weight: 700
+                &_mail
+                    display: block
+                    font-size: 20px
+                    color: #473306
+                    text-decoration: underline
+        
+    .footer
+        grid-area: footer
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin: 15px auto
+        padding: 10px 0
+        width: 100%
+        border-top: 1px solid whitesmoke
+        &_logo
+            &_link
+                &_image
+                    width: 150px
+        &_contacts
+            &_phone
+                font-size: 26px
+        &_dev
+            margin-top: 15px
+            height: 80px
+
+@media screen and ( max-width: 590px )
+    .footer
+        &_dev
+            padding-top: 10px
+            display: block
+            text-align: start
+            .design
+                background: url('/images/icon_des.png') no-repeat 0 50%
+                margin-bottom: 5px
+
+@media screen and ( max-width: 450px )
+    .page
+        display: block
+    .header
+        display: block
+        &_logo
+            text-align: center
+            padding: 0
+            margin-top: 5px
+            margin-bottom: 10px
+        &_contacts
+            display: block
+            text-align: center
+            padding: 0
+            padding-bottom: 10px
+            &_phone
+                display: inline-block
+                font-size: 24px
+                width: 50%
+            &_mail
+                font-size: 24px
+        &_title
+            margin-bottom: 10px
+
+    .sidebar
+        .tutor_profile
+            &_contacts
+                text-align: center
+                &_phone
+                    font-size: 24px
+                &_mail
+                    font-size: 24px
+            &_photo
+                text-align: center
+                img
+                    width: 50vw
+                    border: 1px solid #9e9e9e
+
+    .footer
+        display: block
+        &_logo
+            display: none
+        &_contacts
+            display: block
+            text-align: center
+            padding: 0
+            &_phone
+                display: inline-block
+                font-size: 18px
+                width: 50%
+            &_mail
+                font-size: 18px
+        &_dev
+            text-align: center
+            height: auto
+            .design
+                background: none
+                margin-bottom: 5px      
+
+
+@media screen and ( max-width: 400px )
+    .header
+        display: block
+        &_contacts
+            &_phone
+                display: inline-block
+                font-size: 20px
+                width: 50%
+            &_mail
+                font-size: 20px
+
+@media screen and ( max-width: 330px )
+    .header
+        display: block
+        &_contacts
+            &_phone
+                display: inline-block
+                font-size: 18px
+                width: 50%
+            &_mail
+                font-size: 18px

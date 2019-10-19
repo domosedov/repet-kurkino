@@ -1,0 +1,584 @@
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url("/fonts/PTSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("/fonts/PTSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #858482;
+  font-family: "PTSans-Regular", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  max-width: 960px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(20%, 160px) minmax(80%, 800px);
+      grid-template-columns: minmax(20%, 160px) minmax(80%, 800px);
+  -ms-grid-rows: 150px 1fr 250px;
+      grid-template-rows: 150px 1fr 250px;
+      grid-template-areas: "header header" "sidebar main" "footer footer";
+  height: 100vh;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "logo contacts" "title title";
+}
+
+.header_logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  padding-left: 5%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.header_logo_link_image {
+  max-width: 205px;
+}
+
+.header_contacts {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contacts;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header_contacts_phone {
+  color: #303030;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+}
+
+.header_contacts_mail {
+  color: #303030;
+  font-size: 15px;
+  padding-left: 25px;
+  background: url(/images/icon_mail.png) no-repeat 0 50%;
+}
+
+.header_title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+}
+
+.header_title .tutor_title {
+  font-size: 21px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.sidebar .tutor_profile {
+  font-size: 14px;
+}
+
+.sidebar .tutor_profile_name {
+  display: none;
+}
+
+.sidebar .tutor_profile_photo {
+  text-align: center;
+}
+
+.sidebar .tutor_profile_photo img {
+  border: 1px solid #9e9e9e;
+}
+
+.sidebar .tutor_profile_contacts {
+  text-align: center;
+}
+
+.sidebar .tutor_profile_contacts p {
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  color: #473306;
+}
+
+.sidebar .tutor_profile_contacts_phone {
+  color: #c30b13;
+  font-weight: 700;
+}
+
+.sidebar .tutor_profile_contacts_mail {
+  color: #473306;
+  text-decoration: underline;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+.main .tutor_title {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.main .tutor_name {
+  font-size: 26px;
+  color: #473306;
+  margin-bottom: 20px;
+}
+
+.main .tutor_description {
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.main .tutor_contacts {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.main .tutor_contacts_name {
+  font-size: 20px;
+  color: #ffae00;
+}
+
+.main .tutor_contacts_phone {
+  font-weight: 700;
+  color: #303030;
+}
+
+.main .tutor_contacts_phone a {
+  color: #303030;
+}
+
+.main .tutor_contacts_mail {
+  color: #303030;
+  text-decoration: underline;
+}
+
+.template h1, .template h2, .template h3, .template h4, .template h5, .template h6 {
+  font-size: 18px;
+  color: #696969;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.template p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #858482;
+}
+
+.template a {
+  color: #303030;
+  text-decoration: underline;
+}
+
+.template ul li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #858482;
+}
+
+.template_price {
+  margin: 15px auto;
+  padding: 5px 15px;
+  background-color: whitesmoke;
+}
+
+.template_price h1, .template_price h2, .template_price h3, .template_price h4, .template_price h5, .template_price h6 {
+  margin-top: 5px;
+}
+
+.template_price ul li {
+  color: #000;
+}
+
+.template_price p {
+  padding: 5px 0;
+}
+
+.footer {
+  margin-top: 50px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "logo contacts" "dev dev";
+}
+
+.footer_logo {
+  padding-left: 5%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer_logo_link_image {
+  max-width: 205px;
+}
+
+.footer_contacts {
+  padding-right: 5%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contacts;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer_contacts_phone {
+  color: #303030;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer_contacts_mail {
+  color: #303030;
+  font-size: 15px;
+  padding-left: 25px;
+  background: url(/images/icon_mail.png) no-repeat 0 50%;
+}
+
+.footer_dev {
+  border-top: 1px solid whitesmoke;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: dev;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_dev p {
+  margin: 0 15px;
+}
+
+.footer_dev .design {
+  font-size: 15px;
+  line-height: 23px;
+  padding-left: 22px;
+  background: url("/images/icon_des.png") no-repeat 0 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .header_title .tutor_title {
+    padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .sidebar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .page {
+    -ms-grid-rows: 100px 1fr 1fr 100px;
+        grid-template-rows: 100px 1fr 1fr 100px;
+        grid-template-areas: "header header" "sidebar sidebar" "main main" "footer footer";
+  }
+  .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin: 0px auto;
+    padding: 0;
+    width: 100%;
+  }
+  .header_logo_link_image {
+    width: 150px;
+  }
+  .header_contacts_phone {
+    font-size: 26px;
+  }
+  .header_title {
+    border-top: 1px solid whitesmoke;
+    padding: 5px 0;
+    text-align: center;
+  }
+  .header_title .tutor_title {
+    padding: 0;
+    border-bottom: none;
+  }
+  .main {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: main;
+    margin-bottom: 20px;
+  }
+  .main .tutor_name {
+    display: none;
+  }
+  .main .tutor_description {
+    font-size: 16px;
+  }
+  .sidebar {
+    padding-left: 5%;
+    padding-right: 5%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: sidebar;
+  }
+  .sidebar .tutor_profile {
+    font-size: 14px;
+  }
+  .sidebar .tutor_profile_name {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    color: #473306;
+    margin-bottom: 10px;
+  }
+  .sidebar .tutor_profile_photo {
+    text-align: center;
+  }
+  .sidebar .tutor_profile_photo img {
+    width: 30vw;
+    border: 1px solid #9e9e9e;
+  }
+  .sidebar .tutor_profile_contacts {
+    text-align: start;
+    margin-bottom: 10px;
+  }
+  .sidebar .tutor_profile_contacts p {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    color: #473306;
+  }
+  .sidebar .tutor_profile_contacts_phone {
+    font-size: 20px;
+    color: #c30b13;
+    font-weight: 700;
+  }
+  .sidebar .tutor_profile_contacts_mail {
+    display: block;
+    font-size: 20px;
+    color: #473306;
+    text-decoration: underline;
+  }
+  .footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin: 15px auto;
+    padding: 10px 0;
+    width: 100%;
+    border-top: 1px solid whitesmoke;
+  }
+  .footer_logo_link_image {
+    width: 150px;
+  }
+  .footer_contacts_phone {
+    font-size: 26px;
+  }
+  .footer_dev {
+    margin-top: 15px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .footer_dev {
+    padding-top: 10px;
+    display: block;
+    text-align: start;
+  }
+  .footer_dev .design {
+    background: url("/images/icon_des.png") no-repeat 0 50%;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .page {
+    display: block;
+  }
+  .header {
+    display: block;
+  }
+  .header_logo {
+    text-align: center;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .header_contacts {
+    display: block;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .header_contacts_phone {
+    display: inline-block;
+    font-size: 24px;
+    width: 50%;
+  }
+  .header_contacts_mail {
+    font-size: 24px;
+  }
+  .header_title {
+    margin-bottom: 10px;
+  }
+  .sidebar .tutor_profile_contacts {
+    text-align: center;
+  }
+  .sidebar .tutor_profile_contacts_phone {
+    font-size: 24px;
+  }
+  .sidebar .tutor_profile_contacts_mail {
+    font-size: 24px;
+  }
+  .sidebar .tutor_profile_photo {
+    text-align: center;
+  }
+  .sidebar .tutor_profile_photo img {
+    width: 50vw;
+    border: 1px solid #9e9e9e;
+  }
+  .footer {
+    display: block;
+  }
+  .footer_logo {
+    display: none;
+  }
+  .footer_contacts {
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+  .footer_contacts_phone {
+    display: inline-block;
+    font-size: 18px;
+    width: 50%;
+  }
+  .footer_contacts_mail {
+    font-size: 18px;
+  }
+  .footer_dev {
+    text-align: center;
+    height: auto;
+  }
+  .footer_dev .design {
+    background: none;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    display: block;
+  }
+  .header_contacts_phone {
+    display: inline-block;
+    font-size: 20px;
+    width: 50%;
+  }
+  .header_contacts_mail {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .header {
+    display: block;
+  }
+  .header_contacts_phone {
+    display: inline-block;
+    font-size: 18px;
+    width: 50%;
+  }
+  .header_contacts_mail {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=tutor.css.map */

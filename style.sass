@@ -1,0 +1,385 @@
+@import "fonts.sass"
+@import url("reset.css")
+
+$gap: 30px
+$dark_text_color: #473306
+$light_text_color: #fafafa
+
+.page
+    color: #303030
+    font-family: "PTSans-Regular", sans-serif
+
+    .header_container
+        .header
+            max-width: 1000px
+            margin: auto
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: $gap * 4
+            padding: 0 5%
+            &_logo
+                &_link
+                    &_image
+                        width: 205px
+            &_contacts
+                display: flex
+                flex-direction: column
+                text-align: right
+                &_phone
+                    font-family: Roboto, sans-serif
+                    font-size: 36px
+                    text-decoration: none
+                    color: inherit
+                &_mail
+                    font-size: 16px
+                    text-decoration: none
+                    color: inherit
+                    background: url(/images/icon_mail.png) no-repeat 27% 60%
+
+    .main_container
+        .main
+            background: url("images/header_bg.png") no-repeat 50% 0
+            min-height: 835px
+            &_links
+                max-width: 1000px
+                margin: auto
+                padding: $gap 5% 0
+                font-size: 40px
+                text-transform: uppercase
+                display: flex
+                justify-content: space-between
+                &_item
+                    display: block
+                    text-decoration: none
+                    color: $light_text_color
+                    max-width: 400px
+                    font-weight: 500
+                    text-align: center
+                    text-shadow: 1px 1px 5px #303030
+                    &_left
+                    &__right
+                        padding-top: 25px
+            &_tutor
+                font-size: 44px
+                text-transform: uppercase
+                margin: auto
+                padding-top: $gap * 6
+                &_link
+                    display: flex
+                    flex-direction: column
+                    color: $dark_text_color
+                    text-decoration: none
+                    align-items: center
+                    &_line
+                        font-weight: 700
+                        text-align: center
+                        background-color: rgba(255, 255, 255, 0.8)
+                        padding: 5px $gap
+
+        // tutors section
+        .tutors
+            max-width: 1000px
+            margin: auto
+            &_title
+                margin-top: -$gap * 2
+                padding: 0 5%
+                &_text
+                    font-weight: bold
+                    color: $dark_text_color
+                    text-align: center
+                    font-size: 24px
+            &_logo
+                margin: $gap auto
+                &_image
+                    max-width: 80px
+                    margin: auto
+            &_links
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: center
+                &_item
+                    width: 30%
+                    margin: $gap / 2
+                    .card
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        &_title
+                            display: flex
+                            align-items: center
+                            margin-bottom: $gap / 2
+                            &_bracket
+                                max-width: $gap / 2
+                            &_text
+                                font-size: 16px
+                                text-align: center
+                                padding: 0 10px
+                                max-width: $gap * 8
+                        &_image
+                            max-width: 200px
+                            max-height: 200px
+
+        .friends
+            padding-top: $gap * 4
+            padding-bottom: $gap
+            text-align: center
+            background: #a5c9a8 url("images/line_1.png") no-repeat 50% 0
+            &_content
+                max-width: 1000px
+                margin: auto
+            &_title
+                color: $light_text_color
+                text-shadow: 1px 1px 5px #303030
+                font-size: 36px
+                text-transform: uppercase
+                &::after
+                    content: ""
+                    display: inline-block
+                    width: $gap * 2
+                    height: 7px
+                    background: #fafafa
+                    box-shadow: 1px 1px 5px #303030
+                    vertical-align: middle
+                    margin-left: $gap / 2
+                &::before
+                    content: ""
+                    display: inline-block
+                    width: 65px
+                    height: 7px
+                    background: #fafafa
+                    box-shadow: 1px 1px 5px #303030
+                    vertical-align: middle
+                    margin-right: $gap / 2
+            &_links
+                width: 100%
+                margin-top: $gap * 2
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-around
+                &_item
+                    display: block
+                    text-decoration: none
+                    font-weight: 600
+                    font-size: 24px
+                    max-width: 30%
+                    text-align: center
+                    margin: $gap / 2
+                    color: $light_text_color
+                    text-shadow: 1px 1px 5px #303030
+                    &_title
+                        margin: auto
+                        max-width: $gap * 8
+                        margin-bottom: $gap / 2
+                    &_image
+                        display: block
+                        max-height: 150px
+                    &:hover
+                        outline: 1px solid red
+
+// Banks
+.banks
+    padding-top: $gap * 4
+    padding-bottom: $gap
+    text-align: center
+    background: #ffb100 url("images/line_2.png") no-repeat 50% 0
+    &_content
+        max-width: 1000px
+        margin: auto
+    &_title
+        color: $light_text_color
+        text-shadow: 1px 1px 5px #303030
+        font-size: 36px
+        text-transform: uppercase
+        &::after
+            content: ""
+            display: inline-block
+            width: $gap * 2
+            height: 7px
+            background: #fafafa
+            box-shadow: 1px 1px 5px #303030
+            vertical-align: middle
+            margin-left: $gap / 2
+        &::before
+            content: ""
+            display: inline-block
+            width: 65px
+            height: 7px
+            background: #fafafa
+            box-shadow: 1px 1px 5px #303030
+            vertical-align: middle
+            margin-right: $gap / 2
+    &_links
+        width: 100%
+        margin-top: $gap
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        &_item
+            display: block
+            text-decoration: none
+            font-weight: 600
+            font-size: 24px
+            max-width: 25%
+            text-align: center
+            margin: $gap
+            color: $light_text_color
+            text-shadow: 1px 1px 5px #303030
+            &_logo
+                display: block
+                max-height: 65px
+            &:hover
+                outline: 1px solid red
+
+// Photos
+
+.photos
+    padding-top: $gap * 4
+    text-align: center
+    background: url("images/line_3.png") no-repeat 50% 0
+    margin-bottom: $gap * 2
+    &_content
+        max-width: 1000px
+        margin: auto
+    &_title
+        color: #9bcfd6
+        text-shadow: 1px 1px 1px $dark_text_color
+        font-size: 36px
+        text-transform: uppercase
+        &::after
+            content: ""
+            display: inline-block
+            width: $gap * 2
+            height: 7px
+            background-color: #9bcfd6
+            box-shadow: 1px 1px 3px #303030
+            vertical-align: middle
+            margin-left: $gap / 2
+        &::before
+            content: ""
+            display: inline-block
+            width: 65px
+            height: 7px
+            background-color: #9bcfd6
+            box-shadow: 1px 1px 3px #303030
+            vertical-align: middle
+            margin-right: $gap / 2
+    &_slider
+        width: 100%
+        margin: $gap auto 0
+        padding: 0 5%
+        img
+            margin: auto
+
+.location
+    padding-top: $gap * 4
+    background: url('/images/line.png') no-repeat 50% 0
+    min-height: 830px
+    &_content
+        max-width: 1000px
+        margin: auto
+    &_title
+        text-align: center
+        color: $light_text_color
+        text-shadow: 1px 1px 2px black
+        font-size: 36px
+        text-transform: uppercase
+        margin-bottom: $gap
+        &::after
+            content: ""
+            display: inline-block
+            width: $gap * 2
+            height: 7px
+            background: $light_text_color
+            box-shadow: 1px 1px 5px #303030
+            vertical-align: middle
+            margin-left: $gap / 2
+        &::before
+            content: ""
+            display: inline-block
+            width: 65px
+            height: 7px
+            background: $light_text_color
+            box-shadow: 1px 1px 5px #303030
+            vertical-align: middle
+            margin-right: $gap / 2
+    #map
+        width: 80%
+        margin: auto
+        height: 400px
+        border: 2px solid whitesmoke
+
+// end location
+
+.info
+    &_content
+        max-width: 1000px
+        margin: auto
+        font-size: 24px
+        text-align: center
+        margin-bottom: $gap
+    &_line
+        display: block
+        &_link
+            text-decoration: none
+            color: inherit
+
+// Footer
+
+.footer_container
+    border-top: 1px solid whitesmoke
+    padding-top: $gap
+    .footer
+        &_main
+            max-width: 1000px
+            margin: auto
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: $gap * 4
+            padding: 0 5%
+            &_logo
+                &_link
+                    &_image
+                        width: 205px
+            &_contacts
+                display: flex
+                flex-direction: column
+                text-align: right
+                &_phone
+                    font-family: Roboto, sans-serif
+                    font-size: 36px
+                    text-decoration: none
+                    color: inherit
+                &_mail
+                    font-size: 16px
+                    text-decoration: none
+                    color: inherit
+                    background: url(/images/icon_mail.png) no-repeat 27% 60%
+        &_copy
+            text-align: center
+            font-size: 26px
+            color: $light_text_color
+            background-color: #ffb100
+        &_dev_container
+            background-color: whitesmoke
+            padding: $gap / 2
+            vertical-align: middle
+            .footer_dev
+                max-width: 1000px
+                margin: auto
+                display: flex
+                justify-content: space-between
+                align-items: center
+                padding: 0 5%
+                &_design
+                    color: inherit
+                    text-decoration: none
+                    padding-left: 20px
+                    background: url('images/icon_des.png') no-repeat 0 50%
+                &_domosedev
+                    text-decoration: none
+                    color: inherit
