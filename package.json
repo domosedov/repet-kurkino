@@ -1,0 +1,20 @@
+{
+  "name": "repet-kurkino",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "index.js",
+  "repository": "https://github.com/domosedov-dev/repet-kurkino.git",
+  "author": "Aleksandr Grigorii <domosedov.dev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

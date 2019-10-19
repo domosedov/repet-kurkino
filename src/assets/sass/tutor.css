@@ -1,16 +1,16 @@
 @font-face {
   font-family: "PTSans-Regular";
-  src: url("/fonts/PTSans-Regular.ttf");
+  src: url("/src/assetssets/fonts/PTSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "PTSans-Bold";
-  src: url("/fonts/PTSans-Bold.ttf");
+  src: url("/src/assetssets/fonts/PTSans-Bold.ttf");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.ttf");
+  src: url("/src/assetssets/fonts/Roboto-Regular.ttf");
 }
 
 * {
@@ -95,7 +95,7 @@ a {
   color: #303030;
   font-size: 15px;
   padding-left: 25px;
-  background: url(/images/icon_mail.png) no-repeat 0 50%;
+  background: url(/src/assets/images/icon_mail.png) no-repeat 0 50%;
 }
 
 .header_title {
@@ -299,7 +299,7 @@ a {
   color: #303030;
   font-size: 15px;
   padding-left: 25px;
-  background: url(/images/icon_mail.png) no-repeat 0 50%;
+  background: url(/src/assets/images/icon_mail.png) no-repeat 0 50%;
 }
 
 .footer_dev {
@@ -327,7 +327,7 @@ a {
   font-size: 15px;
   line-height: 23px;
   padding-left: 22px;
-  background: url("/images/icon_des.png") no-repeat 0 50%;
+  background: url("/src/assetssets/images/icon_des.png") no-repeat 0 50%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -474,7 +474,7 @@ a {
     text-align: start;
   }
   .footer_dev .design {
-    background: url("/images/icon_des.png") no-repeat 0 50%;
+    background: url("/src/assetssets/images/icon_des.png") no-repeat 0 50%;
     margin-bottom: 5px;
   }
 }
